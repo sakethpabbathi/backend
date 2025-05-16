@@ -531,7 +531,7 @@ const pool = new Pool({
   password: process.env.PG_PASS,
   database: process.env.PG_NAME,
   port: process.env.PG_PORT,
-  ssl: process.env.PG_SSL === 'true'
+  ssl: process.env.PG_SSL === 'true' ? { rejectUnauthorized: false } : false
 });
 
 pool.connect()
