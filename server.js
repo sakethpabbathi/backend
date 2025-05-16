@@ -674,7 +674,7 @@ app.post('/signup', async (req, res) => {
     res.status(200).json({ message: "Signup Successful" });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: "Signup Failed" });
+    res.status(500).json({ error: "Signup is Failed " });
   }
 });
 
